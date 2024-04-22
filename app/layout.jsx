@@ -1,11 +1,22 @@
-import '@styles/global.css'
+import '@styles/global.css';
+import { Children } from "react";
 
+export const metadata = {
+  title: "promptshare",
+  description: "discover and share Ai Prompts",
+};
 
-
-const layout = () => {
+const ROOTLAYOUT = ({children}) => { 
   return (
-    <div>layout</div>
-  )
-}
+    <html lang="en">
+      <body>
+        <div className="main">
+          <div className="gradient" />
+        </div>
+        <main className="app">{children}</main> 
+      </body>
+    </html>
+  );
+};
 
-export default layout
+export default ROOTLAYOUT;
